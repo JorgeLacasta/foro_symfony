@@ -1,0 +1,25 @@
+foro-symfony-1920
+
+Implementación de un foro con Symfony 5 en clase
+Análisis proyecto
+
+
+URLS
+
+/ -> /ultimas
+/ultimas -> Últimas por orden de comentario más reciente
+/ -> /ultimas
+/ultimas
+/ultimas/pag/1
+/publicacion/<título>     -> Usamos slugs
+/publicacion/borrar/<id>
+/publicacion/editar/<id>
+/publicacion/nueva
+/publicacion/<título>/comenta
+/categoria/<nombre>
+/categoria/<nombre>/pag/1
+
+Symfony
+/admin/
+/login/
+
