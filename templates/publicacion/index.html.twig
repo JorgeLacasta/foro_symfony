@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PublicacionController!{% endblock %}
+
+{% block navegacion %}
+<nav>
+    <ul>
+        <li><a href=""><img src="" alt=""></a></li>
+        <li><a href=""><p></p></a></li>
+        <li><a href=""><img src="" alt=""></a></li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block body %}
+    <table border="1px solid">
+        <thead>
+        <th>Titulo</th>
+        <th>Fecha</th>
+        <th>Contenido</th>
+        <th>Categoria</th>
+        </thead>
+        <tbody>
+        {% for publicacion in listado_publicaciones %}
+            <tr>
+                <td>{{publicacion.getTitulo}}</td>
+                <td>{{publicacion.getFecha|date('Y-m-d')}}</td>
+                <td>{{publicacion.getContenido}}</td>
+                <td>{{publicacion.getCategoria}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <h3><span> << </span><span> < </span> Página 3 <span> > </span><span> >> </span></h3>
+{% endblock %}

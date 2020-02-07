@@ -26,6 +26,12 @@ class Comentario
      */
     private $contenido;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Publicacion", inversedBy="id_comentario")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $id_publicacion;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -51,6 +57,18 @@ class Comentario
     public function setContenido(string $contenido): self
     {
         $this->contenido = $contenido;
+
+        return $this;
+    }
+
+    public function getIdPublicacion(): ?Publicacion
+    {
+        return $this->id_publicacion;
+    }
+
+    public function setIdPublicacion(?Publicacion $id_publicacion): self
+    {
+        $this->id_publicacion = $id_publicacion;
 
         return $this;
     }
