@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PublicacionController!{% endblock %}
+
+{% block navegacion %}
+<nav>
+    <ul>
+        <li><a href=""><img src="" alt=""></a></li>
+        <li><a href=""><p></p></a></li>
+        <li><a href=""><img src="" alt=""></a></li>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block body %}
+    <h2>Detalle de publicacion: </h2>
+    {{ publicacion.getTitulo }}     <br>
+    {{ publicacion.getContenido }}  <br>
+    {{publicacion.getFecha|date('Y-m-d')}}      <br>
+    {{publicacion.getCategoria}}
+    <br>
+
+{% endblock %}
