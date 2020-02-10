@@ -1,0 +1,17 @@
+{# templates/bundles/TwigBundle/Exception/error404.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PublicacionController!{% endblock %}
+
+{% block body %}
+    <h1>ERROR</h1>
+
+    <p>
+        La pagina no exite. Vuelve al home:
+    </p>
+
+    <a href="{{ path('ultimas-publicaciones') }}">Volver al home</a>
+    <br>
+
+{% endblock %}
